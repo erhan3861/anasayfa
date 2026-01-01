@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Talent14 Anasayfa Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ========== RESET ========== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,system-ui,sans-serif;}
+body{background:#fff;overflow-x:hidden}
+
+/* ========== SECTION BASE ========== */
+.section{
+  position: relative;
+  min-height:100vh;
+  padding:80px 10%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:5px;
+}
+.reverse{flex-direction:row-reverse}
+
+.text{max-width:480px;color:#fff}
+.text.dark{color:#333}
+h1,h2{font-size:42px}
+p{margin-top:16px;opacity:.9}
+
+/* ========== BUTTON ========== */
+button{
+  margin-top:24px;
+  padding:14px 32px;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  background:#fff;
+  color:#333;
+  transition:.3s;
+}
+button:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.25)}
+
+/* ========== HOME BUTTON ========== */
+.home-btn{
+  position:absolute;
+  top:24px;
+  right:24px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:#333;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  transition:.3s;
+  z-index:10;
+}
+.home-btn:hover{transform:translateY(-2px);background:#fff}
+
+/* ========== HERO ICON BUTTONS ========== */
+.hero-bottom-buttons{
+  position:absolute;
+  left:10%;
+  bottom:40px;
+  display:flex;
+  gap:18px;
+}
+.hero-circle-btn{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  transition:.3s;
+}
+.hero-circle-btn:hover{transform:translateY(-6px) scale(1.05)}
+.hero-circle-btn img{width:80px;height:80px;object-fit:contain}
+
+/* ========== CIRCLE IMAGE ========== */
+.circle{
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+}
+.circle img{width:100%;height:100%;object-fit:cover}
+
+/* ========== COLORS ========== */
+.hero{background:linear-gradient(90deg,#3555d9,#b56be8)}
+.codemino{background:#e85b5b}
+.scratch{background:#f4a300}
+.robot{background:#8b5cf6}
+.bilisim{background:#1fb978}
+.patika{background:#1da1c2}
+.hub{background:#6dd3c3}
+.kesfet{background:#63c6b6}
+.magaza{background:#f3f4f6}
+
+/* ========== FULL WIDTH ========== */
+.full{flex-direction:column;text-align:center}
+.full img{
+  width:100%;
+  max-width:1100px;
+  margin-top:40px;
+  border-radius:18px;
+  box-shadow:0 30px 60px rgba(0,0,0,.25);
+}
+
+/* ========== ANIMATION ========== */
+.animate{opacity:0;transform:translateY(60px);transition:.8s}
+.animate.show{opacity:1;transform:translateY(0)}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:900px){
+  .section,.reverse{flex-direction:column;text-align:center}
+  .circle{width:300px;height:300px}
+  .hero-bottom-buttons{position:static;margin-top:40px;justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO / HOME -->
+<section class="section hero animate" id="hero">
+  <div class="text">
+    <h1>TALENT14 EVRENİ</h1>
+    <p>K12 odaklı, yapay zekâ destekli kodlama, robotik ve dijital beceri platformudur.</p>
+    <button onclick="location.href='#patikalar'">Evreni Keşfet</button>
+  </div>
+  <div>  <img src="images/img1.png" style="width:570px"></div>
+  <div class="hero-bottom-buttons">
+    <a href="#patikalar" class="hero-circle-btn"><img src="images/1.png"></a>
+    <a href="#talenthub" class="hero-circle-btn"><img src="images/2.png"></a>
+    <a href="#kesfet" class="hero-circle-btn"><img src="images/3.png"></a>
+    <a href="#magaza" class="hero-circle-btn"><img src="images/4.png"></a>
+  </div>
+</section>
+
+<!-- CODEMINO -->
+<section class="section codemino animate" id="codemino">
+  <a href="#hero" class="home-btn">Home</a>
+  <div class="circle"><img src="images/img2.png"></div>
+  <div class="text">
+    <h2>CODEMINO</h2>
+    <p>316 aşamalı oyunlaştırılmış algoritma ve kodlama öğrenimi.</p>
+    <button>Oyna · Düşün · Kodla</button>
+  </div>
+</section>
+
+<!-- SCRATCH -->
+<section class="section scratch reverse animate" id="scratch">
+  <a href="#hero" class="home-btn">Home</a>
+  <div class="circle"><img src="images/img3.png"></div>
+  <div class="text">
+    <h2>SCRATCH AI</h2>
+    <p>Kamera ve yapay zekâ tabanlı oyunlarla güvenli öğrenme.</p>
+    <button>AI ile Öğren</button>
+  </div>
+</section>
+
+<!-- ROBOT -->
+<section class="section robot animate" id="robot14">
+  <a href="#hero" class="home-btn">Home</a>
+  <div class="circle"><img src="images/img4.png"></div>
+  <div class="text">
+    <h2>ROBOT14</h2>
+    <p>Robotik simülasyonlarla kodla, test et ve yönet.</p>
+    <button>Simüle Et</button>
+  </div>
+</section>
+
+<!-- BILISIM -->
+<section class="section bilisim reverse animate" id="bilisim">
+  <a href="#hero" class="home-btn">Home</a>
+  <div class="circle"><img src="images/img5.png"></div>
+  <div class="text">
+    <h2>BİLİŞİM DERSLERİ</h2>
+    <p>Python, Web, Siber Güvenlik ve Yapay Zekâ eğitimleri.</p>
+     <button>Derslere Git</button>
+  </div>
+</section>
+
+<!-- PATIKALAR -->
+<section class="section patika animate" id="patikalar">
+  <a href="#hero" class="home-btn">Home</a>
+  <div class="circle"><img src="images/img6.png"></div>
+  <div class="text">
+    <h2>PATİKALAR</h2>
+    <p>Kendi öğrenme yolunu seç, geleceğini inşa et.</p>
+    <button>Patikalara Git</button>
+  </div>
+</section>
+
+<!-- TALENT HUB -->
+<section class="section hub full animate" id="talenthub">
+  <a href="#hero" class="home-btn">Home</a>
+  <h2 class="text dark">TALENT HUB</h2>
+  <p class="text dark">Öğrencilerin proje ürettiği ve paylaştığı topluluk.</p>
+  <img src="images/img7.png">
+  <button>TalentHub'a Git</button>
+</section>
+
+<!-- KESFET -->
+<section class="section kesfet full animate" id="kesfet">
+  <a href="#hero" class="home-btn">Home</a>
+  <h2 class="text dark">KEŞFET</h2>
+  <p class="text dark">İlgi alanına göre içerikleri keşfet.</p>
+  <img src="images/img8.png">
+  <button>Keşfete Git</button>
+</section>
+
+<!-- MAGAZA -->
+<section class="section magaza full animate" id="magaza">
+  <a href="#hero" class="home-btn">Home</a>
+  <h2 class="text dark">PAKETLER & MAĞAZA</h2>
+  <p class="text dark">Eğitim paketleri ve AI destekli içerikler.</p>
+  <img src="images/img9.png">
+  <button>Mağazaya Git</button>
+</section>
+
+<script>
+const items=document.querySelectorAll(".animate");
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.25});
+items.forEach(i=>io.observe(i));
+</script>
+
+</body>
+</html>
